@@ -1,0 +1,15 @@
+Getting valid numeric input where a valid number is an integer of any value.
+Input: Text prompt to user
+Output: An integer of any value
+
+Create flag to track if integer has been entered
+while flag is false:
+	Display prompt to user
+	If data entered by user is considered an integer:
+		Store data entered
+		Set flag to true
+	otherwise:
+		Inform user that integer data is required
+		Clear input
+	
+return numeric data

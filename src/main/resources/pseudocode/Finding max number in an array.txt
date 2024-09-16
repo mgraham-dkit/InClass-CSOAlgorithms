@@ -1,0 +1,17 @@
+Finds the largest number in an array
+Input: Array of numbers
+Output: Largest number found in the array
+
+if input array is null:
+	throw new null pointer exception
+	
+if input array is empty:
+	throw new invalid argument exception
+
+Create max and set to first element in array
+	
+for each number in the array:
+	if number > max:
+		Set max to number
+		
+Return max

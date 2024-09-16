@@ -71,4 +71,44 @@ public class BasicAlgorithms {
             System.out.println("Wow, " + age + "? You're old!");
         }
     }
+
+    public static int getValidInt(String prompt){
+        // Create a Scanner to read from the command line
+        Scanner input = new Scanner(System.in);
+        // Create a boolean to track if we have a valid age yet
+        boolean validInt = false;
+        // Create the age variable (so we can still access it after the loop ends)
+        // If we create it within the loop, it will only exist within the loop's scope
+        int num = 0;
+        // While we haven't gotten a valid age
+        while(!validInt){
+            System.out.println(prompt);
+            // Check if the user provided a number
+            if (input.hasNextInt()){
+                // If they did, take it in and store it
+                num = input.nextInt();
+                // Change flag to show we have a real age value
+                validInt = true;
+            }else{
+                // Inform the user that they need to enter a number
+                System.out.println("Please enter a number next time!");
+                // Clear the scanner of previous (invalid) input
+                // Without this we can't take in new information - infinite loop!
+                input.nextLine();
+            }
+        }
+
+        // Return the num
+        return num;
+    }
+
+    public static int findMax(int a, int b, int c) {
+        if (a >= b && a >= c) {
+            return a;
+        } else if (b >= c) {
+            return b;
+        } else {
+            return c;
+        }
+    }
 }

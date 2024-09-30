@@ -1,5 +1,7 @@
 package week02;
 
+import week04.ArrayUtils;
+
 import java.util.Arrays;
 
 public class ManipulatingArrays {
@@ -13,5 +15,8 @@ public class ManipulatingArrays {
             System.out.println(nums[i]);
         }
         System.out.println(Arrays.toString(nums));
+
+        int [] resized = ArrayUtils.resizeInsert(nums, 5, 100);
+        System.out.println(Arrays.toString(resized));
     }
 }

@@ -78,6 +78,31 @@ public class ArrayUtils {
         return deleted;
     }
 
+    public static boolean contains(int [] data, int value, int pos){
+        for(int i = 0; i < pos; i++){
+            if(data[i] == value){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int [] deduplicate(int [] data){
+        // todo: Validate
+        // todo: Optimise
+
+        int [] dest = new int[data.length];
+        int tracker = 0;
+        for (int i = 0; i < data.length; i++) {
+            if(!contains(dest, data[i], tracker)){
+                dest[tracker] = data[i];
+                tracker++;
+            }
+        }
+        // Todo: Create a smaller version of dest
+        return dest;
+    }
+
     private static void validatePosition(int[] data, int pos) {
         if(pos < 0 || pos >= data.length){
             throw new ArrayIndexOutOfBoundsException("Supplied position must be within the boundary of the array");

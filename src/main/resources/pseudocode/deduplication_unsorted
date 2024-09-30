@@ -1,0 +1,15 @@
+Deduplicating an unsorted array
+Input: Array to be deduplicated
+Output: Deduplicated array
+
+<VALIDATION>
+
+Create a new blank array (destination) with same size as input array
+Create a tracker variable to store current position in destination array and set it to 0
+
+for each element in input array:
+    If current element is unique*:
+        Add current element to destination[tracker]
+        Increase tracker
+
+Shrink the destination array to tracker value*

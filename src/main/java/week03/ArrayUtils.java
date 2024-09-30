@@ -3,7 +3,6 @@ package week03;
 public class ArrayUtils {
     public static int overwrite(int [] data, int pos){
         validateArray(data);
-
         validatePosition(data, pos);
 
         int deleted = data[pos];
@@ -13,7 +12,6 @@ public class ArrayUtils {
 
     public static int [] resizeDelete(int [] data, int pos){
         validateArray(data);
-
         validatePosition(data, pos);
 
         int [] resized = new int[data.length-1];
@@ -54,6 +52,4 @@ public class ArrayUtils {
             throw new IllegalArgumentException("Array cannot be null");
         }
     }
-
-
 }

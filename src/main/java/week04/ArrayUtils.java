@@ -88,8 +88,15 @@ public class ArrayUtils {
     }
 
     public static int [] deduplicate(int [] data){
-        // todo: Validate
-        // todo: Optimise
+        validateArray(data);
+
+        if (data.length < 2) {
+            int [] dest = new int[data.length];
+            for (int i = 0; i < data.length; i++) {
+                dest[i] = data[i];
+            }
+            return dest;
+        }
 
         int [] dest = new int[data.length];
         int tracker = 0;

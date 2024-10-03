@@ -1,6 +1,6 @@
 package week02;
 
-import week04.ArrayUtils;
+import week04.utils.ArrayUtils;
 
 import java.util.Arrays;
 

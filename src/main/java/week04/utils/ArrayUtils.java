@@ -1,4 +1,4 @@
-package week04;
+package week04.utils;
 
 public class ArrayUtils {
     public static int overwrite(int [] data, int pos){
@@ -90,15 +90,8 @@ public class ArrayUtils {
     public static int [] deduplicate(int [] data){
         validateArray(data);
 
-        if (data.length < 2) {
-            int [] dest = new int[data.length];
-            for (int i = 0; i < data.length; i++) {
-                dest[i] = data[i];
-            }
-            return dest;
-        }
-
         int [] dest = new int[data.length];
+
         int tracker = 0;
         for (int i = 0; i < data.length; i++) {
             if(!contains(dest, data[i], tracker)){

@@ -1,0 +1,36 @@
+Action: Merging two arrays in sorted order
+Inputs: Two int arrays in sorted order (ASC)
+Output: New merged array containing combined information of both input arrays
+
+
+// VALIDATION:
+If either input array is null:
+    Throw new Illegal Argument Exception
+
+// SETUP:
+Create a tracker (countNums1) to count number of elements used from nums1
+Create a tracker (countNums2) to count number of elements used from nums2
+Create a new array (merged) of size nums1.length + nums2.length
+
+// LOGIC:
+for each slot in merged:
+    if countNums1 equals length of nums1:
+        Loop through remaining elements in nums2:   // This could also be loop through to end of merged
+            Set current slot in merged to element at countNums2 position of nums2
+            Increment countNums2 by 1
+            Increment i by 1 (move to next slot in merged)
+    else if countNums2 equals length of nums2:
+        Loop through remaining elements in nums1:   // This could also be loop through to end of merged
+            Set current slot in merged to element at countNums1 position of nums1
+            Increment countNums1 by 1
+            Increment i by 1 (move to next slot in merged)
+    else:
+        if value from nums1 (nums1[countNums1]) is less than or equal to value from nums2 (nums2[countNums2]):
+            Set current slot in merged to nums1[countNums1]
+            Increase countNums1 by 1
+        else:
+            Set current slot in merged to nums2[countNums2]
+            Increase countNums2 by 1
+
+// OUTPUT:
+return merged array

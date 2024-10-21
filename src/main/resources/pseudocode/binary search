@@ -1,0 +1,20 @@
+Action: Searching for a supplied value within a supplied array
+Input: Array to be searched, value to search for
+Output: Position of value in array
+
+//VALIDATION
+
+// SETUP:
+Create variable to track current start of data and set to 0
+Create variable to track current end of data and set to array.length-1
+
+while start <= end:
+    Create variable to track mid : start + (end-start)/2
+    if data at mid equals value:
+        Return mid
+    else if data at mid < value:
+        Set start to mid+1
+    else:
+        Set end to mid-1
+
+return -1

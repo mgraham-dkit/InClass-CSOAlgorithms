@@ -13,7 +13,3 @@ while swapCount is not 0:
         If current element is bigger than next element:
             Swap current element with next element
             increase swap count by 1
-
-
-for(int i = 0; i < array.length; i++){
-    for(int j = 0; j < array.length - 1 - i; j++)

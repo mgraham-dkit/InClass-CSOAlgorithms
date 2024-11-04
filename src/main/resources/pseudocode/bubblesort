@@ -1,0 +1,19 @@
+Action: Sorting a supplied array
+Input: Array to be sorted
+Output: None (array does not need to be returned)
+
+//VALIDATION:
+If array is null:
+    Throw new illegal argument exception
+
+Create swapCount and set to -1
+while swapCount is not 0:
+    Set swapCount to 0
+    For each element in array up to length - 1 - number of passes:
+        If current element is bigger than next element:
+            Swap current element with next element
+            increase swap count by 1
+
+
+for(int i = 0; i < array.length; i++){
+    for(int j = 0; j < array.length - 1 - i; j++)

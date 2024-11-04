@@ -1,0 +1,14 @@
+Action: Sorting a supplied array
+Input: Array to be sorted
+Output: None (array does not need to be returned)
+
+Create variables to track minPosition and minValue
+for each slot in array (startSlot) up to length - 1:
+    Set minPosition to startSlot
+    Set minValue to array[startSlot]
+    for each element in array, starting at i+1 and going to length-1:
+        if current element < minValue:
+            Set minValue to current element
+            Set minPosition to current position
+
+    swap element at startSlot with element at minPosition

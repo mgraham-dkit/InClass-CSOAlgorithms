@@ -1,9 +1,23 @@
 package week08.utils;
 
 public class ArrayUtils {
+    public static void selectionSort(int [] nums){
+        validateArray(nums);
 
+        for(int startSlot = 0; startSlot < nums.length-1; startSlot++){
+            int minPos = startSlot;
+            for (int i = startSlot+1; i < nums.length; i++) {
+                if(nums[i] < nums[minPos]){
+                    minPos = i;
+                }
+            }
+            swap(nums, startSlot, minPos);
+        }
+    }
 
-    public static void bubblesort(int [] nums){
+    public static void bubbleSort(int [] nums){
+        validateArray(nums);
+
         boolean swapped = true;
         int i = 0;
         while(swapped){
@@ -15,6 +29,12 @@ public class ArrayUtils {
                 }
             }
             i++;
+        }
+    }
+
+    private static void validateArray(int[] nums) {
+        if(nums == null){
+            throw new IllegalArgumentException("Null array cannot be sorted.");
         }
     }
 
